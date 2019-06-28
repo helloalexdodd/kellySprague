@@ -8,6 +8,14 @@
 		
 		&:first-of-type {
 			margin: 50px 0 0;
+
+			a {
+				transition: .3s;
+
+				&:hover {
+					color: $primaryColor
+				}
+			}
 		}
 	}
 
@@ -18,7 +26,8 @@
 
 	.socialIcons {
 		display: flex;
-		justify-content: space-around;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		width: 25%;
 		margin: 30px;
 
@@ -37,13 +46,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
-		width: 25%;
+		width: 40%;
 		padding: 30px;
 		
 		fieldset {
 			display: flex;
 			flex-direction: column;
 			align-items: space-between;
+			width: 100%;
 			padding: 0;
 			border: none;
 		}
@@ -51,27 +61,17 @@
 		input {
 			height: 40px;
 			padding-left: 15px;
-			margin-bottom: 10px;
+			margin: 0 0 10px;
 			border: 2px solid $black;
 			border-radius: 0;
-
-			&:first-of-type {
-				width: 100%;
-				// margin-right: 2px;
-			}
-
-			&:last-of-type {
-				width: 100%;
-				// margin-left: 2px;
-			}
 		}
 
 		.textareaBox {
-			// width: 100%;
+			width: 100%;
 			margin-bottom: 20px;
 		
 			textarea {
-				height: 100px;
+				height: 150px;
 				width: 100%;
 				padding-left: 15px;
 				border: 2px solid $black;
