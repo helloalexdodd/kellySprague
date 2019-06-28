@@ -1,0 +1,79 @@
+// this file is all of the base styling to start the project
+
+html {
+	font-size: 125%;
+	font-family: $primaryFont;
+	font-weight: 400;
+}
+
+.wrapper {
+	max-width: 1345px;
+	margin: 0 auto;
+}
+
+body {
+	background-image: url('./../assets/plant.jpg');
+	background-repeat: no-repeat;
+	background-position: 80% 80%;
+	background-color: $white;
+	line-height: 32px;
+	letter-spacing: 2px;
+}
+
+header {
+	.wrapper {
+		display: flex;
+	
+		.headerBox {
+			width: 40%;
+			// text-align: center;
+		}
+
+		nav {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 60%;
+			margin: 0 auto;
+			padding: 0;
+
+
+			ul {
+				display: flex;
+				justify-content: space-around;
+				width: 100%;
+				list-style: none;
+
+				li {
+					margin: 10px;
+				}
+			}
+		}
+	}
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+.clickHere {
+	font-weight: 600;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+
+	.wrapper p {
+		width: 100%;
+		font-size: .8rem;
+	}
+}
