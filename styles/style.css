@@ -211,26 +211,37 @@ header .wrapper .headerBox {
   width: 40%;
 }
 
-header .wrapper .headerBox h1 span {
-  font-size: 1.3rem;
+header .wrapper .headerBox h1 {
+  margin-bottom: 20px;
+  font-size: 2.37rem;
 }
 
-header .wrapper nav {
+header .wrapper .headerBox h1 span {
+  font-size: 1.33rem;
+}
+
+header .wrapper .headerBox h2 {
+  margin-top: 0;
+  font-size: 1.33rem;
+}
+
+header .wrapper .headerBox h3 {
+  font-size: 1rem;
+}
+
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 60%;
   margin: 0 auto;
   padding: 0;
 }
 
-header .wrapper nav ul {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,8 +251,66 @@ header .wrapper nav ul {
   list-style: none;
 }
 
-header .wrapper nav ul li {
+nav ul li {
   margin: 10px;
+}
+
+nav a {
+  font-size: 20px;
+  color: #584E4A;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 8px;
+}
+
+nav a:before, nav a:after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background-color: #f9cb4d;
+}
+
+nav a:before {
+  opacity: 0;
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+  transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav a:after {
+  opacity: 0;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav a:hover:before, nav a:hover:after, nav a:focus:before, nav a:focus:after {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+nav a:hover:before, nav a:focus:before {
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav a:hover:after, nav a:focus:after {
+  -webkit-transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
+  transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 img {
@@ -262,12 +331,18 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 10px 0;
+  font-size: .75rem;
   text-align: center;
 }
 
 footer .wrapper p {
   width: 100%;
-  font-size: .8rem;
+  margin: 0;
+  font-size: .75rem;
+}
+
+footer a:hover {
+  color: #f9cb4d;
 }
 
 .home {
@@ -300,7 +375,120 @@ footer .wrapper p {
 
 .contact p {
   width: 60%;
+}
+
+.contact p:first-of-type {
   margin: 50px 0 0;
+}
+
+.contact .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.contact .socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 25%;
+  margin: 30px;
+}
+
+.contact .socialIcons svg {
+  height: 50px;
+  width: 50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact .socialIcons svg:hover {
+  color: #f9cb4d;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 25%;
+  padding: 30px;
+}
+
+.contact form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  padding: 0;
+  border: none;
+}
+
+.contact form input {
+  height: 40px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  border: 2px solid #272727;
+  border-radius: 0;
+}
+
+.contact form input:first-of-type {
+  width: 100%;
+}
+
+.contact form input:last-of-type {
+  width: 100%;
+}
+
+.contact form .textareaBox {
+  margin-bottom: 20px;
+}
+
+.contact form .textareaBox textarea {
+  height: 100px;
+  width: 100%;
+  padding-left: 15px;
+  border: 2px solid #272727;
+  border-radius: 0;
+  resize: none;
+}
+
+.contact form .buttonBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact form .buttonBox button {
+  height: 40px;
+  width: 130px;
+  border: none;
+  background-color: #f9cb4d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact form .buttonBox button:hover {
+  background-color: #fbd97e;
 }
 
 .herbalMedicine {
@@ -311,5 +499,4 @@ footer .wrapper p {
 
 .herbalMedicine p {
   width: 60%;
-  margin: 50px 0 0;
 }

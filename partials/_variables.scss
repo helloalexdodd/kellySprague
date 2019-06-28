@@ -1,9 +1,18 @@
 // // // Colour scheme
 $white: white;
+// eventual white #f0f0f0
 $black: #272727;
-// $yellow: ;
-// $green: ;
-// $brown: ;
+$primaryColor: #f9cb4d;
 
 // Fonts
 $primaryFont: Montserrat, sans-serif;
+
+
+
+$red: #F37272;
+$brown: #584E4A;
+$whitey: #f0f0f0;
+
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
