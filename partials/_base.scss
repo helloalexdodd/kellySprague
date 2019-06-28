@@ -1,9 +1,11 @@
 // this file is all of the base styling to start the project
 
 html {
+	color: $black;
 	font-size: 125%;
 	font-family: $primaryFont;
 	font-weight: 400;
+	overflow: hidden;
 }
 
 .wrapper {
@@ -26,7 +28,13 @@ header {
 	
 		.headerBox {
 			width: 40%;
-			// text-align: center;
+
+			h1 {
+				span {
+					font-size: 1.3rem;
+				}
+			}
+	
 		}
 
 		nav {

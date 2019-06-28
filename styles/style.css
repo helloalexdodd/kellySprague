@@ -180,9 +180,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 html {
+  color: #272727;
   font-size: 125%;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -207,6 +209,10 @@ header .wrapper {
 
 header .wrapper .headerBox {
   width: 40%;
+}
+
+header .wrapper .headerBox h1 span {
+  font-size: 1.3rem;
 }
 
 header .wrapper nav {
@@ -244,7 +250,7 @@ img {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #272727;
 }
 
 .clickHere {
@@ -272,7 +278,7 @@ footer .wrapper p {
 
 .home p {
   width: 60%;
-  margin: 50px 0 0;
+  margin: 30px 0 0;
 }
 
 .consultation {
