@@ -184,19 +184,21 @@ html {
   font-size: 125%;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .wrapper {
-  max-width: 1345px;
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 body {
   background-image: url("./../assets/plant.jpg");
   background-repeat: no-repeat;
-  background-position: 80% 80%;
+  background-position: 80% 120%;
   background-color: white;
+  background-attachment: fixed;
   line-height: 32px;
   letter-spacing: 2px;
 }
@@ -311,6 +313,10 @@ nav a:hover:after, nav a:focus:after {
   transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.hamburger {
+  display: none;
+}
+
 img {
   width: 100%;
 }
@@ -327,7 +333,9 @@ a {
 footer {
   position: fixed;
   bottom: 0;
+  background: white;
   width: 100%;
+  height: 73px;
   padding: 10px 0;
   font-size: .75rem;
   text-align: center;
@@ -360,6 +368,11 @@ footer a:hover {
   margin: 50px;
 }
 
+.consultation nav ul li:nth-of-type(2) a {
+  color: #f9cb4d;
+  text-shadow: 1px 1px #272727;
+}
+
 .consultation p {
   width: 60%;
   margin: 50px 0 0;
@@ -374,10 +387,122 @@ footer a:hover {
   color: #f9cb4d;
 }
 
+.consultation .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.consultation .socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 25%;
+  margin: 30px;
+}
+
+.consultation .socialIcons svg {
+  height: 50px;
+  width: 50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.consultation .socialIcons svg:hover {
+  color: #f9cb4d;
+}
+
+.consultation form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 55%;
+  padding: 30px;
+}
+
+.consultation form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  width: 100%;
+  padding: 0;
+  border: none;
+}
+
+.consultation form input {
+  height: 40px;
+  padding-left: 15px;
+  margin: 0 0 10px;
+  border: 2px solid #272727;
+  border-radius: 0;
+}
+
+.consultation form .textareaBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.consultation form .textareaBox textarea {
+  height: 150px;
+  width: 100%;
+  padding: 5px 0 0 15px;
+  border: 2px solid #272727;
+  border-radius: 0;
+  resize: none;
+}
+
+.consultation form .buttonBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.consultation form .buttonBox button {
+  height: 40px;
+  width: 130px;
+  border: none;
+  background-color: #f9cb4d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.consultation form .buttonBox button:hover {
+  background-color: #fbd97e;
+}
+
 .contact {
   width: 100%;
   height: 100vh;
   margin: 50px;
+}
+
+.contact nav ul li:nth-of-type(3) a {
+  color: #f9cb4d;
+  text-shadow: 1px 1px #272727;
 }
 
 .contact p {
@@ -475,7 +600,7 @@ footer a:hover {
 .contact form .textareaBox textarea {
   height: 150px;
   width: 100%;
-  padding-left: 15px;
+  padding: 5px 0 0 15px;
   border: 2px solid #272727;
   border-radius: 0;
   resize: none;
@@ -510,6 +635,16 @@ footer a:hover {
   margin: 50px;
 }
 
+.herbalMedicine nav ul li:last-of-type a {
+  color: #f9cb4d;
+  text-shadow: 1px 1px #272727;
+}
+
 .herbalMedicine p {
+  font-size: .9rem;
   width: 60%;
+}
+
+.herbalMedicine p:last-of-type {
+  margin-bottom: 100px;
 }

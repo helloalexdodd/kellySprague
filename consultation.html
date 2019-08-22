@@ -30,8 +30,24 @@
 	<main>
 		<div class="wrapper">
 			<p>If you'd like to inquire about a non-medical consultation, please contact me <a href="./contact.html" class="clickHere">here</a>.</p>
+			<form action="" method="POST">
+				<fieldset>
+					<label for="username" class="visuallyHidden"></label>
+					<input type="text" id="username" name="username" placeholder="name" autocorrect="off" action="" method="POST">
+					<label for="email" class="visuallyHidden"></label>
+					<input type="email" id="email" name="email" placeholder="email" autocorrect="off" action="" method="POST">
+				</fieldset>
+				<div class="textareaBox">
+					<label for="textarea" class="visuallyHidden"></label>
+					<textarea type="textarea" id="textarea" name="textarea" placeholder="Tell me how we can work together..." action=""
+						method="POST"></textarea>
+				</div>
+				<div class="buttonBox">
+					<button type="submit">submit</button>
+				</div>
+			</form>
 		</div>
-	</main>
+		</main>
 	<footer>
 		<div class="wrapper">
 			<p>Website designed and created by <a href="http://alexdodd.ca">Alex Dodd</a> &copy 2019</p>

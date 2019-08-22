@@ -3,6 +3,11 @@
 	height: 100vh;
 	margin: 50px;
 
+	nav ul li:nth-of-type(3) a {
+		color: $primaryColor;
+		text-shadow: 1px 1px $black;
+	}
+
 	p {
 		width: 60%;
 		
@@ -73,7 +78,7 @@
 			textarea {
 				height: 150px;
 				width: 100%;
-				padding-left: 15px;
+				padding: 5px 0 0 15px;
 				border: 2px solid $black;
 				border-radius: 0;
 				resize: none;
