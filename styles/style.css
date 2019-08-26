@@ -193,7 +193,8 @@ html {
 
 .wrapper {
   position: relative;
-  max-width: 1200px;
+  max-width: 1100px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -334,7 +335,7 @@ a {
 
 svg.fa-pagelines {
   position: fixed;
-  right: 120px;
+  right: 220px;
   bottom: 120px;
   height: 300px;
   width: 300px;
@@ -664,11 +665,11 @@ main .wrapper {
   text-shadow: 1px 1px #272727;
 }
 
-.herbalMedicine p {
+.herbalMedicine main p {
   font-size: .9rem;
   width: 60%;
 }
 
-.herbalMedicine p:last-of-type {
+.herbalMedicine main p:last-of-type {
   margin-bottom: 100px;
 }
