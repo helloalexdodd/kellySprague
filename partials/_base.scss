@@ -6,6 +6,10 @@ html {
 	overflow-x: hidden;
 }
 
+.outerWrapper {
+	margin: 50px;
+}
+
 .wrapper {
 	position: relative;
 	max-width: 1200px;
@@ -13,11 +17,12 @@ html {
 }
 
 body {
-	background-image: url('./../assets/plant.jpg');
-	background-repeat: no-repeat;
-	background-position: 80% 120%;
+	// background-image: url('./../assets/plant.jpg');
+	// background-repeat: no-repeat;
+	// background-position: 80% 120%;
 	background-color: $white;
-	background-attachment: fixed;
+	margin: 0;
+	// background-attachment: fixed;
 	line-height: 32px;
 	letter-spacing: 2px;
 }
@@ -129,6 +134,7 @@ img {
 
 a {
 	text-decoration: none;
+	font-weight: 600;
 	color: $black;
 }
 
@@ -136,11 +142,21 @@ a {
 	font-weight: 600;
 }
 
+svg.fa-pagelines {
+	@include position (fixed, null, 100px, 73px, null);
+	height: 400px;
+	width: 400px;
+	z-index: -1;
+}
+
 footer {
 	@include position (fixed, null, null, 0, null);
-	background: $white;
+	display: flex;
+	align-items: center;
+	background: $black;
 	width: 100%;
 	height: 73px;
+	color: $white;
 	padding: 10px 0;
 	font-size: .75rem;
 	text-align: center;
@@ -151,8 +167,12 @@ footer {
 		font-size: .75rem;
 	}
 
-	a:hover {
-		color: $primaryColor;
+	a {
+		color: $white;
+
+		&:hover {
+			color: $primaryColor;
+		}
 	}
 }
 

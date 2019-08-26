@@ -187,6 +187,10 @@ html {
   overflow-x: hidden;
 }
 
+.outerWrapper {
+  margin: 50px;
+}
+
 .wrapper {
   position: relative;
   max-width: 1200px;
@@ -194,11 +198,8 @@ html {
 }
 
 body {
-  background-image: url("./../assets/plant.jpg");
-  background-repeat: no-repeat;
-  background-position: 80% 120%;
-  background-color: white;
-  background-attachment: fixed;
+  background-color: #f0f0f0;
+  margin: 0;
   line-height: 32px;
   letter-spacing: 2px;
 }
@@ -323,6 +324,7 @@ img {
 
 a {
   text-decoration: none;
+  font-weight: 600;
   color: #272727;
 }
 
@@ -330,12 +332,28 @@ a {
   font-weight: 600;
 }
 
+svg.fa-pagelines {
+  position: fixed;
+  right: 100px;
+  bottom: 73px;
+  height: 400px;
+  width: 400px;
+  z-index: -1;
+}
+
 footer {
   position: fixed;
   bottom: 0;
-  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #272727;
   width: 100%;
   height: 73px;
+  color: #f0f0f0;
   padding: 10px 0;
   font-size: .75rem;
   text-align: center;
@@ -347,14 +365,23 @@ footer .wrapper p {
   font-size: .75rem;
 }
 
+footer a {
+  color: #f0f0f0;
+}
+
 footer a:hover {
   color: #f9cb4d;
+}
+
+main .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .home {
   width: 100%;
   height: 100vh;
-  margin: 50px;
 }
 
 .home p {
@@ -365,7 +392,6 @@ footer a:hover {
 .consultation {
   width: 100%;
   height: 100vh;
-  margin: 50px;
 }
 
 .consultation nav ul li:nth-of-type(2) a {
@@ -497,7 +523,6 @@ footer a:hover {
 .contact {
   width: 100%;
   height: 100vh;
-  margin: 50px;
 }
 
 .contact nav ul li:nth-of-type(3) a {
@@ -505,20 +530,20 @@ footer a:hover {
   text-shadow: 1px 1px #272727;
 }
 
-.contact p {
+.contact main p {
   width: 60%;
 }
 
-.contact p:first-of-type {
+.contact main p:first-of-type {
   margin: 50px 0 0;
 }
 
-.contact p:first-of-type a {
+.contact p a {
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-.contact p:first-of-type a:hover {
+.contact p a:hover {
   color: #f9cb4d;
 }
 
@@ -632,7 +657,6 @@ footer a:hover {
 .herbalMedicine {
   width: 100%;
   height: 100vh;
-  margin: 50px;
 }
 
 .herbalMedicine nav ul li:last-of-type a {
