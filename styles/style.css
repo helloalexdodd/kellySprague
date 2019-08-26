@@ -334,10 +334,10 @@ a {
 
 svg.fa-pagelines {
   position: fixed;
-  right: 100px;
-  bottom: 73px;
-  height: 400px;
-  width: 400px;
+  right: 120px;
+  bottom: 120px;
+  height: 300px;
+  width: 300px;
   z-index: -1;
 }
 
@@ -535,7 +535,7 @@ main .wrapper {
 }
 
 .contact main p:first-of-type {
-  margin: 50px 0 0;
+  margin: 30px 0 0;
 }
 
 .contact p a {

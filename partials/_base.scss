@@ -143,9 +143,9 @@ a {
 }
 
 svg.fa-pagelines {
-	@include position (fixed, null, 100px, 73px, null);
-	height: 400px;
-	width: 400px;
+	@include position (fixed, null, 120px, 120px, null);
+	height: 300px;
+	width: 300px;
 	z-index: -1;
 }
 
