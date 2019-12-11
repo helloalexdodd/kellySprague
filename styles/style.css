@@ -236,19 +236,17 @@ html {
 }
 
 html {
-  color: #272727;
   font-size: 125%;
+}
+
+body {
+  background: #fef8f6;
+  margin: 0;
+  color: #272727;
   font-family: "Alice", serif;
   font-weight: 400;
-  overflow-x: hidden;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
-}
-
-.outerWrapper {
-  margin: 50px;
+  line-height: 32px;
+  letter-spacing: 2px;
 }
 
 .wrapper {
@@ -258,38 +256,45 @@ p {
   margin: 0 auto;
 }
 
-body {
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #272727;
+}
+
+ul,
+ol {
   margin: 0;
-  line-height: 32px;
-  letter-spacing: 2px;
+  padding: 0;
+  list-style: none;
 }
 
-header .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+p,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
 }
 
-header .wrapper .headerBox {
-  width: 40%;
-}
-
-header .wrapper .headerBox h1 {
+header .wrapper h1 {
   margin-bottom: 20px;
   font-size: 2.37rem;
   line-height: 1;
 }
 
-header .wrapper .headerBox h1 span {
+header .wrapper h1 span {
   font-size: 1.33rem;
 }
 
-header .wrapper .headerBox h2 {
+header .wrapper h2 {
   margin-top: 0;
   font-size: 1.33rem;
 }
 
-header .wrapper .headerBox h3 {
+header .wrapper h3 {
   font-size: 1rem;
 }
 
@@ -300,9 +305,15 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   padding: 0;
+}
+
+nav .image-container {
+  width: 250px;
 }
 
 nav ul {
@@ -311,8 +322,10 @@ nav ul {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  list-style: none;
 }
 
 nav ul li {
@@ -332,7 +345,7 @@ nav a:before, nav a:after {
   left: 0;
   right: 0;
   height: 1.5px;
-  background-color: #385b4f;
+  background-color: #b27409;
 }
 
 nav a:before {
@@ -439,13 +452,16 @@ nav a:hover:after, nav a:focus:after {
   left: 50%;
 }
 
-img {
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: #272727;
+.book-now {
+  background: #272727;
+  padding: 10px;
+  margin: 5px;
+  color: #fef8f6;
+  font-family: "Montserrat", sans-serif;
+  font-size: .75rem;
+  font-weight: 550;
+  letter-spacing: 0.2px;
+  border-radius: 5px;
 }
 
 .clickHere {
@@ -472,8 +488,7 @@ footer {
           align-items: center;
   background: rgba(39, 39, 39, 0.75);
   width: 100%;
-  height: 30px;
-  color: #f0f0f0;
+  color: #fef8f6;
   padding: 10px 0;
   text-align: center;
 }
@@ -485,7 +500,7 @@ footer .wrapper p {
 }
 
 footer a {
-  color: #f0f0f0;
+  color: #fef8f6;
 }
 
 footer a:hover {
@@ -493,9 +508,6 @@ footer a:hover {
 }
 
 @media (max-width: 1150px) {
-  header .wrapper .headerBox {
-    width: 100%;
-  }
   header .wrapper nav {
     display: none;
   }
@@ -510,13 +522,21 @@ main .wrapper {
   display: flex;
 }
 
+main img {
+  float: right;
+  width: 20vw;
+  margin-left: -20px;
+  shape-outside: url("./../assets/plant-4.svg");
+  shape-margin: 0.8em;
+  shape-image-threshold: 0.5;
+}
+
 .home {
   width: 100%;
   height: 100vh;
 }
 
 .home p {
-  width: 60%;
   margin: 30px 0;
 }
 
@@ -526,7 +546,7 @@ main .wrapper {
 }
 
 .consultation nav ul li:nth-of-type(2) a {
-  color: #385b4f;
+  color: #b27409;
   text-shadow: 1px 1px #272727;
 }
 
@@ -541,7 +561,7 @@ main .wrapper {
 }
 
 .consultation p a:hover {
-  color: #385b4f;
+  color: #b27409;
 }
 
 .consultation .contactForm {
@@ -572,7 +592,7 @@ main .wrapper {
 }
 
 .consultation .socialIcons svg:hover {
-  color: #385b4f;
+  color: #b27409;
 }
 
 .consultation form {
@@ -642,13 +662,13 @@ main .wrapper {
   height: 40px;
   width: 130px;
   border: none;
-  background-color: #385b4f;
+  background-color: #b27409;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
 .consultation form .buttonBox button:hover {
-  background-color: #4b7b6a;
+  background-color: #e3940b;
 }
 
 .contact {
@@ -656,8 +676,13 @@ main .wrapper {
   height: 100vh;
 }
 
-.contact main p {
-  width: 60%;
+.contact main img {
+  float: right;
+  width: 20vw;
+  margin-left: -20px;
+  shape-outside: url("./../assets/plant-4.svg");
+  shape-margin: 0.8em;
+  shape-image-threshold: 0.5;
 }
 
 .contact main p:first-of-type {
@@ -670,7 +695,7 @@ main .wrapper {
 }
 
 .contact p a:hover {
-  color: #385b4f;
+  color: #b27409;
 }
 
 .contact .contactForm {
@@ -702,15 +727,14 @@ main .wrapper {
 }
 
 .contact .socialIcons svg:hover {
-  color: #385b4f;
+  color: #b27409;
 }
 
 .contact .better-inline-booking-widget {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 566px;
   margin-bottom: 50px;
-  overflow: hidden;
 }
 
 .contact .better-inline-booking-widget iframe {
@@ -726,9 +750,17 @@ main .wrapper {
   height: 100vh;
 }
 
+.herbalMedicine main img {
+  float: right;
+  width: 20vw;
+  margin-left: -20px;
+  shape-outside: url("./../assets/plant-4.svg");
+  shape-margin: 0.8em;
+  shape-image-threshold: 0.5;
+}
+
 .herbalMedicine main p {
   font-size: .9rem;
-  width: 60%;
 }
 
 .herbalMedicine main p:last-of-type {

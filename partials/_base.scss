@@ -1,17 +1,15 @@
 html {
-	color: $black;
 	font-size: 125%;
+}
+
+body {
+	background: $white;
+	margin: 0;
+	color: $black;
 	font-family: $primaryFont;
 	font-weight: 400;
-	overflow-x: hidden;
-}
-
-p {
-	font-family: $secondaryFont;
-}
-
-.outerWrapper {
-	margin: 50px;
+	line-height: 32px;
+	letter-spacing: 2px;
 }
 
 .wrapper {
@@ -21,53 +19,66 @@ p {
 	margin: 0 auto;
 }
 
-body {
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}
+
+ul,
+ol {
 	margin: 0;
-	line-height: 32px;
-	letter-spacing: 2px;
+	padding: 0;
+	list-style: none;
+}
+
+p,
+h2 {
+	font-family: $secondaryFont;
+	letter-spacing: 1px;
 }
 
 header .wrapper {
-	display: flex;
-
-	.headerBox {
-		width: 40%;
-
-		h1 {
-			margin-bottom: 20px;
-			font-size: 2.37rem;
-			line-height: 1;
-			
-			span {
-				font-size: 1.33rem;
-			}
-		}
-
-		h2 {
-			margin-top: 0;
+	h1 {
+		margin-bottom: 20px;
+		font-size: 2.37rem;
+		line-height: 1;
+		
+		span {
 			font-size: 1.33rem;
 		}
+	}
 
-		h3 {
-			font-size: 1rem;
-		}
+	h2 {
+		margin-top: 0;
+		font-size: 1.33rem;
+	}
 
+	h3 {
+		font-size: 1rem;
 	}
 }
 
 nav {
 	display: flex;
 	justify-content: center;
-	width: 60%;
+	align-items: center;
 	margin: 0 auto;
 	padding: 0;
 
+	.image-container {
+		width: 250px;
+	}
 
 	ul {
 		display: flex;
 		justify-content: space-around;
+		align-items: center;
 		width: 100%;
-		list-style: none;
 
 		li {
 			margin: 10px;
@@ -79,11 +90,6 @@ nav {
 		text-decoration: none;
 		padding-bottom: 8px;
 
-		&:hover {
-			// transition: .2s;
-			// color: $primaryColour;
-		}
-
 		&:before,
 		&:after {
 			content: '';
@@ -91,7 +97,7 @@ nav {
 			bottom: 2px;
 			left: 0; right: 0;
 			height: 1.5px;
-			background-color: $primaryColour;
+			background-color: $secondaryColour;
 		}
 
 		&:before {
@@ -141,25 +147,24 @@ nav {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: $black;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+	span {
+		display: block;
+		position: absolute;
+		height: 4px;
+		width: 100%;
+		background: $black;
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transition: .25s ease-in-out;
+		-moz-transition: .25s ease-in-out;
+		-o-transition: .25s ease-in-out;
+		transition: .25s ease-in-out;
+	}
 }
 
 .hamburger span:nth-child(1) {
@@ -201,13 +206,16 @@ nav {
   left: 50%;
 }
 
-img {
-	width: 100%;
-}
-
-a {
-	text-decoration: none;
-	color: $black;
+.book-now {
+	background: $black;
+	padding: 10px;
+	margin: 5px;
+	color: $white;
+	font-family: $secondaryFont;
+	font-size: .75rem;
+	font-weight: 550;
+	letter-spacing: 0.2px;
+	border-radius: 5px;
 }
 
 .clickHere {
@@ -227,7 +235,6 @@ footer {
 	align-items: center;
 	background: rgba($black, 0.75);
 	width: 100%;
-	height: 30px;
 	color: $white;
 	padding: 10px 0;
 	text-align: center;
@@ -249,10 +256,6 @@ footer {
 
 @media (max-width: 1150px) {
 	header .wrapper {
-		.headerBox {
-			width: 100%;
-		}
-	
 		nav {
 			display: none;
 		}
